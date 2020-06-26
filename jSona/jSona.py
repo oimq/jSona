@@ -29,15 +29,20 @@ class jSona() :
     def loadJson(self, cpath, cry=True, ex=False) :
         try :
             with open(cpath, 'r') as openfile :
-                return json.load(openfile)
-                if cry : print("LOAD SUCCESS FROM [ {} ]".format(cpath))
+                data = json.load(openfile)
+                openfile.close()
+            if cry : print("LOAD SUCCESS FROM [ {} ]".format(cpath))
         except Exception as e :
-            self.error(e, "LOAD JSON [ {} ]".format(cpath), ex)
+            self.error(e, "LOAD JSON FROM [ {} ]".format(cpath), ex)
+        finally :
+            return data
+
 
     def saveJson(self, cpath, data, cry=True, ex=False) :
         try :
             with open(cpath, 'w') as openfile :
                 json.dump(data, openfile)
-                if cry : print("SAVE SUCCESS TO [ {} ]".format(cpath))
+                openfile.close()
+            if cry : print("SAVE SUCCESS TO [ {} ]".format(cpath))
         except Exception as e :
-            self.error(e, "SAVE JSON [ {} ]".format(cpath), ex)
+            self.error(e, "SAVE JSON TO [ {} ]".format(cpath), ex)

@@ -15,6 +15,8 @@ jSona have two major functions
 
 * saveJson : Saves to json format file.
 
+* loads, dumps : Equals loads and dumps functions in json module.
+
 Also supports useful function from exists.
 
 * loads
@@ -28,15 +30,21 @@ Also supports useful function from exists.
 * Script
 ```python
 from jSona import jSona
+from pprint import pprint as pp
 
 jso = jSona()
-table = jso.loadJson("json path", cry=True)
-jso.saveJson("json path", table, cry=True)
+
+sample_data = {'hello':['world', 'everyone~']}
+jso.saveJson("sample.json", sample_data, cry=True) # Save data
+
+load_data = jso.loadJson("sample.json", cry=True)  # Load data
+pp(load_data)
 ```
 * Outputs
 ```python
-LOAD SUCCESS FROM [json path]
-SAVE SUCCESS TO [json path]
+SAVE SUCCESS TO [ sample.json ]
+LOAD SUCCESS FROM [ sample.json ]
+{'hello': ['world', 'everyone~']}
 ```
 
 ***
