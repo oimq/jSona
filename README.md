@@ -17,12 +17,6 @@ jSona have two major functions
 
 * loads, dumps : Equals loads and dumps functions in json module.
 
-Also supports useful function from exists.
-
-* loads
-
-* dumps
-
 ***
 
 ### Examples
