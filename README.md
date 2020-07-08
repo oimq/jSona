@@ -7,6 +7,15 @@ Error tolerances are added to bulit-in json module.
 Because those kind of works are really annoying.
 ***
 
+
+### Installation
+
+```code
+pip3 install jSona-master/
+```
+
+***
+
 ### Projects
 
 jSona have two major functions
