@@ -1,1 +1,1 @@
-from .jSona import jSona
+from .core.parser import save, load, dumps, loads

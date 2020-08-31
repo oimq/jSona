@@ -20,9 +20,9 @@ pip3 install jSona-master/
 
 jSona have two major functions
 
-* loadJson : Loads data from json format file.
+* load : Loads data from json format file.
 
-* saveJson : Saves to json format file.
+* save : Saves to json format file.
 
 * loads, dumps : Equals loads and dumps functions in json module.
 
@@ -32,15 +32,14 @@ jSona have two major functions
 
 * Script
 ```python
-from jSona import jSona
+# from jSona import save, load
 from pprint import pprint as pp
-
-jso = jSona()
+from jSona import save, load
 
 sample_data = {'hello':['world', 'everyone~']}
-jso.saveJson("sample.json", sample_data, cry=True) # Save data
+save("sample.json", sample_data, cry=True)
 
-load_data = jso.loadJson("sample.json", cry=True)  # Load data
+load_data = load("sample.json", cry=True)
 pp(load_data)
 ```
 * Outputs
